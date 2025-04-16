@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+require('dotenv').config();
 
 const serverPort = 3001; 
-const serverURL = `http://10.0.1.11:${serverPort}/`;
+const serverURL = `http://${process.env.API_URL}:${serverPort}/`;
 
 class CustomerApp extends Component {
   constructor() {

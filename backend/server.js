@@ -2,7 +2,6 @@ const port = 3001;
 const express = require('express')
 const bodyParser = require("body-parser");
 const app = express();
-
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(function(req, res, next) {
@@ -40,4 +39,4 @@ app.post('/', (req, res) => {
     return res.json(response);
 });
 
-app.listen(port, () => console.log(`Backend app listening on port ${port}!`))
+app.listen(port, '0.0.0.0',() => console.log(`Backend app listening on port ${port}!`))

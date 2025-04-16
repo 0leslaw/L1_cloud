@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 require('dotenv').config();
 
 const serverPort = 3001; 
-const serverURL = `http://${process.env.API_URL}:${serverPort}/`;
+const serverURL = `http://${process.env.API_IP}:${serverPort}/`;
 
 class CustomerApp extends Component {
   constructor() {
